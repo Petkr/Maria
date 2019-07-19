@@ -1,0 +1,1 @@
+﻿Hra je "platformová skákačka", teda hráč sa má skákaním a inými pohybmi vyhýbať nepriateľom, zbierať mince a dostať sa do cieľa.
