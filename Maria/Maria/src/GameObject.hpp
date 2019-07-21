@@ -4,3 +4,10 @@
 #include "Geometry.hpp"
 #include "Level.hpp"
 
+class GameObject
+{
+	Level& level;
+	sf::RectangleShape rectangle_shape;
+public:
+	GameObject(Level& level, const sf::FloatRect& rectangle);
+};

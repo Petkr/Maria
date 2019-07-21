@@ -1,5 +1,9 @@
 #pragma once
-#include "MovableObject.hpp"
+#include "GameObject.hpp"
 #include <vector>
 #include <string>
 
+class Level
+{
+
+};
