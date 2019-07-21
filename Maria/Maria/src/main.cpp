@@ -4,9 +4,12 @@
 #include <thread>
 #include <chrono>
 #include "UI.hpp"
+#include "Textures.hpp"
 
 int main()
 {
+	Textures::Init();
+
 	sf::RenderWindow window(sf::VideoMode(800, 600), "Maria");
 	window.setFramerateLimit(60);
 	
@@ -16,12 +19,13 @@ int main()
 		window.setIcon(32, 32, icon.getPixelsPtr());
 	}
 
-	sf::Texture texture;
-	texture.loadFromFile("resources/mario.png");
-
-	sf::RectangleShape shape(sf::Vector2f(texture.getSize()));
-	shape.setPosition(sf::Vector2f(50, 50));
-	shape.setTexture(&texture);
+	sf::RectangleShape shape;
+	{
+		auto mario_texture = Textures::Get(Textures::mario);
+		shape.setSize(Vector(mario_texture->getSize()));
+		shape.setPosition(sf::Vector2f(50, 50));
+		shape.setTexture(mario_texture);
+	}
 
 	sf::Font font;
 	font.loadFromFile("resources/font.ttf");
@@ -31,7 +35,6 @@ int main()
 	text.setCharacterSize(100);
 	text.setFillColor(sf::Color::Magenta);
 
-	sf::Clock clock;
 
 	while (window.isOpen())
 	{
@@ -54,6 +57,9 @@ int main()
 					break;
 				case sf::Keyboard::D:
 					text.setString("D");
+					break;
+				case sf::Keyboard::Escape:
+					window.close();
 					break;
 				default:
 					break;

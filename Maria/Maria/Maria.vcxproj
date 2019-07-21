@@ -145,6 +145,7 @@
     <ClCompile Include="src\Monster.cpp" />
     <ClCompile Include="src\MovableObject.cpp" />
     <ClCompile Include="src\SolidObject.cpp" />
+    <ClCompile Include="src\Textures.cpp" />
     <ClCompile Include="src\UI.cpp" />
     <ClCompile Include="src\Wall.cpp" />
   </ItemGroup>
@@ -160,6 +161,7 @@
     <ClInclude Include="src\MovableObject.hpp" />
     <ClInclude Include="src\Screen.hpp" />
     <ClInclude Include="src\SolidObject.hpp" />
+    <ClInclude Include="src\Textures.hpp" />
     <ClInclude Include="src\UI.hpp" />
     <ClInclude Include="src\Wall.hpp" />
   </ItemGroup>
@@ -179,6 +181,7 @@
     <Text Include="resources\help.txt" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Makefile" />
     <None Include="resources\level_prvy" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
