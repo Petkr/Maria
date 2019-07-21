@@ -9,13 +9,11 @@ int main()
 {
 	sf::RenderWindow window(sf::VideoMode(800, 600), "SFML works!");
 
-	sf::RectangleShape shape(sf::Vector2f(25, 25));
-	shape.setPosition(sf::Vector2f(50, 50));
-
 	sf::Texture texture;
-	
 	texture.loadFromFile("resources/mario.png");
 
+	sf::RectangleShape shape({ texture.getSize() });
+	shape.setPosition(sf::Vector2f(50, 50));
 	shape.setTexture(&texture);
 
 	sf::Font font;
