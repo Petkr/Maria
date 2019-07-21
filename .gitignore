@@ -332,3 +332,8 @@ ASALocalRun/
 # ignore build output
 Maria/Maria/Maria
 *.o
+
+# ignore VS
+#*.vcxproj
+#*.vcxproj.filters
+#*.sln

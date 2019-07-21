@@ -77,6 +77,8 @@
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>D:\Programming\Libraries;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <EnableModules>true</EnableModules>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -89,6 +91,8 @@
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>D:\Programming\Libraries;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <EnableModules>true</EnableModules>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -103,6 +107,8 @@
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>D:\Programming\Libraries;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <EnableModules>true</EnableModules>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -119,6 +125,8 @@
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>D:\Programming\Libraries;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <EnableModules>true</EnableModules>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -127,11 +135,33 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\Button.cpp" />
+    <ClCompile Include="src\Coin.cpp" />
+    <ClCompile Include="src\Flag.cpp" />
     <ClCompile Include="src\GameObject.cpp" />
+    <ClCompile Include="src\Geometry.cpp" />
     <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\Mario.cpp" />
+    <ClCompile Include="src\Monster.cpp" />
+    <ClCompile Include="src\MovableObject.cpp" />
+    <ClCompile Include="src\SolidObject.cpp" />
+    <ClCompile Include="src\UI.cpp" />
+    <ClCompile Include="src\Wall.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\Button.hpp" />
+    <ClInclude Include="src\Coin.hpp" />
+    <ClInclude Include="src\Flag.hpp" />
     <ClInclude Include="src\GameObject.hpp" />
+    <ClInclude Include="src\Geometry.hpp" />
+    <ClInclude Include="src\Level.hpp" />
+    <ClInclude Include="src\Mario.hpp" />
+    <ClInclude Include="src\Monster.hpp" />
+    <ClInclude Include="src\MovableObject.hpp" />
+    <ClInclude Include="src\Screen.hpp" />
+    <ClInclude Include="src\SolidObject.hpp" />
+    <ClInclude Include="src\UI.hpp" />
+    <ClInclude Include="src\Wall.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
