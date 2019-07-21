@@ -1,7 +1,7 @@
 src = $(wildcard src/*.cpp)
 obj = $(src:.cpp=.o)
 
-LDFLAGS = $(pkg-config --libs sfml-all)
+LDFLAGS = $(shell pkg-config --libs sfml-all)
 
 Maria: $(obj)
 	$(CXX) -o $@ $^ $(LDFLAGS)
