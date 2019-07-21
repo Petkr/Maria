@@ -1,6 +1,6 @@
 SRCDIR = src
 
-src = $(wildcard src/*.cpp)
+src = $(wildcard $(SRCDIR)/*.cpp)
 obj = $(src:.cpp=.o)
 
 CFLAGS = -fconcepts -std=c++2a -g -Wall -pedantic
