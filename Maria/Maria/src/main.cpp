@@ -10,9 +10,11 @@ int main()
 	sf::RenderWindow window(sf::VideoMode(800, 600), "Maria");
 	window.setFramerateLimit(60);
 
-	sf::Image icon;
-	icon.loadFromFile("resources/icon.png");
-	window.setIcon(32, 32, icon.getPixelsPtr());
+	{
+		sf::Image icon;
+		icon.loadFromFile("resources/icon.png");
+		window.setIcon(32, 32, icon.getPixelsPtr());
+	}
 
 	sf::Texture texture;
 	texture.loadFromFile("resources/mario.png");
