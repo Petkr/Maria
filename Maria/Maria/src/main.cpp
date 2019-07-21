@@ -4,7 +4,7 @@
 #include <thread>
 #include <chrono>
 #include "UI.hpp"
-
+//zigu
 int main()
 {
 	sf::RenderWindow window(sf::VideoMode(800, 600), "Maria");
