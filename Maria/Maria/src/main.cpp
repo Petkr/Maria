@@ -8,6 +8,7 @@
 int main()
 {
 	sf::RenderWindow window(sf::VideoMode(800, 600), "Maria");
+	window.setFramerateLimit(60);
 
 	sf::Texture texture;
 	texture.loadFromFile("resources/mario.png");
@@ -25,6 +26,7 @@ int main()
 	text.setFillColor(sf::Color::Magenta);
 
 	sf::Clock clock;
+
 	while (window.isOpen())
 	{
 		sf::Event event;
