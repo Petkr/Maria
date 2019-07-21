@@ -12,7 +12,7 @@ int main()
 	sf::Texture texture;
 	texture.loadFromFile("resources/mario.png");
 
-	sf::RectangleShape shape({ texture.getSize() });
+	sf::RectangleShape shape(sf::Vector2f(texture.getSize()));
 	shape.setPosition(sf::Vector2f(50, 50));
 	shape.setTexture(&texture);
 
