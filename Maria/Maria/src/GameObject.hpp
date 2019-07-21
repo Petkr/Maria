@@ -9,5 +9,5 @@ class GameObject
 	Level& level;
 	sf::RectangleShape rectangle_shape;
 public:
-	GameObject(Level& level, const Rectangle& rectangle);
+	GameObject(Level& level, const sf::FloatRect& rectangle);
 };
