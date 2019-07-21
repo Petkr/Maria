@@ -1,3 +1,5 @@
+SRCDIR = src
+
 src = $(wildcard src/*.cpp)
 obj = $(src:.cpp=.o)
 
@@ -5,7 +7,10 @@ CFLAGS = -fconcepts -std=c++2a -g -Wall -pedantic
 LDFLAGS = $(shell pkg-config --libs sfml-all)
 
 Maria: $(obj)
-	$(CXX) -o $@ $^ $(CFLAGS) $(LDFLAGS)
+	$(CXX) -o $@ $^ $(LDFLAGS)
+
+$(SRCDIR)/%.o: $(SRCDIR)/%.cpp
+	$(CXX) -c -o $@ $^ $(CFLAGS)
 
 .PHONY: clean
 clean:
