@@ -47,6 +47,8 @@ int main()
 				case sf::Keyboard::D:
 					text.setString("D");
 					break;
+				default:
+					break;
 				}
 				break;
 			case sf::Event::MouseButtonPressed:
@@ -55,7 +57,11 @@ int main()
 				case sf::Mouse::Button::Left:
 					text.setString("Klik");
 					break;
+				default:
+					break;
 				}
+				break;
+			default:
 				break;
 			}
 		}
