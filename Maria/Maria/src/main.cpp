@@ -9,9 +9,6 @@ int main()
 {
 	sf::RenderWindow window(sf::VideoMode(800, 600), "SFML works!");
 
-	UI ui;
-	ui.buttons.push_back({UI::margin, UI::margin, 100, 100});
-	sf::RectangleShape s;
 	sf::RectangleShape shape(sf::Vector2f(25, 25));
 	shape.setPosition(sf::Vector2f(50, 50));
 
@@ -21,10 +18,9 @@ int main()
 
 	shape.setTexture(&texture);
 
-	int x = 0;
 	sf::Font font;
 	font.loadFromFile("resources/font.ttf");
-	
+
 	sf::Text text;
 	text.setFont(font);
 	text.setCharacterSize(100);
@@ -33,7 +29,6 @@ int main()
 	sf::Clock clock;
 	while (window.isOpen())
 	{
-		clock.restart();
 		sf::Event event;
 		while (window.pollEvent(event))
 		{
@@ -56,24 +51,21 @@ int main()
 					break;
 				}
 				break;
-			}
 			case sf::Event::MouseButtonPressed:
 				switch (event.mouseButton.button)
 				{
 				case sf::Mouse::Button::Left:
-					for (auto& button : ui.buttons)
-						button.Check();
+					text.setString("Klik");
 					break;
 				}
 				break;
+			}
 		}
 
 		window.clear();
 		window.draw(shape);
 		window.draw(text);
 		window.display();
-
-		std::this_thread::sleep_for(std::chrono::milliseconds(std::max(clock.getElapsedTime().asMicroseconds() - 16667, 0)));
 	}
 
 	return 0;
