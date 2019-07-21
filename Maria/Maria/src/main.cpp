@@ -12,7 +12,7 @@ int main()
 
 	sf::Image icon;
 	icon.loadFromFile("resources/icon.png");
-	window.setIcon(16,16,icon.getPixelsPtr());
+	window.setIcon(16, 16, icon.getPixelsPtr());
 
 	sf::Texture texture;
 	texture.loadFromFile("resources/mario.png");
