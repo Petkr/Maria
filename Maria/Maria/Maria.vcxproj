@@ -163,6 +163,24 @@
     <ClInclude Include="src\UI.hpp" />
     <ClInclude Include="src\Wall.hpp" />
   </ItemGroup>
+  <ItemGroup>
+    <Image Include="resources\background.png" />
+    <Image Include="resources\coin.png" />
+    <Image Include="resources\flag.png" />
+    <Image Include="resources\icon.png" />
+    <Image Include="resources\mario.png" />
+    <Image Include="resources\monster.png" />
+    <Image Include="resources\wall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="resources\font.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="resources\help.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\level_prvy" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

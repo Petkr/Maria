@@ -93,4 +93,42 @@
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
+  <ItemGroup>
+    <Image Include="resources\background.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="resources\coin.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="resources\flag.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="resources\icon.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="resources\mario.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="resources\monster.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="resources\wall.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="resources\font.ttf">
+      <Filter>Resource Files</Filter>
+    </Font>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="resources\help.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\level_prvy">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
 </Project>
