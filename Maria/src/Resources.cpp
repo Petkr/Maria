@@ -1,4 +1,5 @@
 #include "Resources.hpp"
+#include "../../Papo/src/block.hpp"
 #include <fstream>
 #include <iostream>
 
@@ -15,9 +16,7 @@ void loadFromFile<std::string>(std::string& s, const std::string& filename)
 {
 	std::ifstream file(filename);
 	file.seekg(0, std::ios::end);
-	std::vector<char> buffer;
+	block<char> buffer(file.tellg());
 	file.seekg(0);
-	file.read(str, s.capacity());
-
-	std::cout << s.capacity() << std::endl;
+	file.read(buffer(0), buffer.count());
 }
