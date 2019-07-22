@@ -1,15 +1,17 @@
-SRCDIR = src
+SRCDIR = Maria/src
+OBJDIR = Maria/obj
 
 SRCFILES = $(wildcard $(SRCDIR)/*.cpp)
-OBJFILES = $(SRCFILES:.cpp=.o)
+x = $(SRCFILES:.cpp=.o)
+OBJFILES = $(subst $(SRCDIR)/,$(OBJDIR)/,$(x))
 
 CFLAGS = -fconcepts -std=c++2a -g -Wall -pedantic
 LDFLAGS = $(shell pkg-config --libs sfml-all)
 
 Maria: $(OBJFILES)
-	$(CXX) -o $@ $^ $(LDFLAGS)
+	$(CXX) -o $(OBJDIR)/$@ $^ $(LDFLAGS)
 
-$(SRCDIR)/%.o: $(SRCDIR)/%.cpp
+$(OBJDIR)/%.o: $(SRCDIR)/%.cpp
 	$(CXX) -c -o $@ $^ $(CFLAGS)
 
 .PHONY: clean
