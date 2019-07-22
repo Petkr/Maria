@@ -1,5 +1,6 @@
 #include "Resources.hpp"
 #include <fstream>
+#include <iostream>
 
 Resources::Resources()
 	: textures("textures")
@@ -9,8 +10,9 @@ Resources::Resources()
 	, fonts("fonts")
 {}
 
-void Text::loadFromFile(const std::string& filename)
+template <>
+void loadFromFile<std::string>(std::string& res, const std::string& filename)
 {
-	std::ifstream file(filename.c_str());
-	file >> *this;
+	std::ifstream file(filename);
+	res = std::string(std::istreambuf_iterator<char>(file), std::istreambuf_iterator<char>());
 }

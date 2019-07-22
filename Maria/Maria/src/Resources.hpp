@@ -3,14 +3,13 @@
 #include <SFML/Graphics/Font.hpp>
 #include <string>
 #include <map>
-#include <vector>
 #include <filesystem>
 
-class Text : public std::string
+template <typename T>
+void loadFromFile(T& res, const std::string& filename)
 {
-public:
-	void loadFromFile(const std::string& filename);
-};
+	res.loadFromFile(filename);
+}
 
 class Resources
 {
@@ -26,7 +25,7 @@ class Resources
 			{
 				auto path = f.path();
 				T resource;
-				resource.loadFromFile(path.string());
+				loadFromFile(resource, path.string());
 				resources[path.stem()] = resource;
 			}
 		}
@@ -40,8 +39,8 @@ class Resources
 public:
 	Type<sf::Texture> textures;
 	Type<sf::Image> images;
-	Type<Text> texts;
-	Type<Text> levels;
+	Type<std::string> texts;
+	Type<std::string> levels;
 	Type<sf::Font> fonts;
 
 	Resources();

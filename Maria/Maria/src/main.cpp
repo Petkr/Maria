@@ -28,6 +28,12 @@ int main()
 	text.setCharacterSize(100);
 	text.setFillColor(sf::Color::Magenta);
 
+	sf::Text textik;
+	textik.setFont(resources.fonts["font"]);
+	textik.setCharacterSize(10);
+	textik.setFillColor(sf::Color::White);
+	textik.setString(resources.texts["help"]);
+
 	while (window.isOpen())
 	{
 		sf::Event event;
@@ -75,6 +81,7 @@ int main()
 		window.clear();
 		window.draw(shape);
 		window.draw(text);
+		window.draw(textik);
 		window.display();
 	}
 

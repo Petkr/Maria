@@ -149,7 +149,7 @@
     </Font>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="resources\text\help.txt">
+    <Text Include="resources\texts\help.txt">
       <Filter>Resource Files\texts</Filter>
     </Text>
   </ItemGroup>

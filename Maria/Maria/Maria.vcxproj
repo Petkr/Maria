@@ -182,7 +182,7 @@
     <Font Include="resources\fonts\font.ttf" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="resources\text\help.txt" />
+    <Text Include="resources\texts\help.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
