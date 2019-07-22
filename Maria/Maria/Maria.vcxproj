@@ -144,8 +144,8 @@
     <ClCompile Include="src\Mario.cpp" />
     <ClCompile Include="src\Monster.cpp" />
     <ClCompile Include="src\MovableObject.cpp" />
+    <ClCompile Include="src\Resources.cpp" />
     <ClCompile Include="src\SolidObject.cpp" />
-    <ClCompile Include="src\Textures.cpp" />
     <ClCompile Include="src\UI.cpp" />
     <ClCompile Include="src\Wall.cpp" />
   </ItemGroup>
@@ -159,30 +159,30 @@
     <ClInclude Include="src\Mario.hpp" />
     <ClInclude Include="src\Monster.hpp" />
     <ClInclude Include="src\MovableObject.hpp" />
+    <ClInclude Include="src\Resources.hpp" />
     <ClInclude Include="src\Screen.hpp" />
     <ClInclude Include="src\SolidObject.hpp" />
-    <ClInclude Include="src\Textures.hpp" />
     <ClInclude Include="src\UI.hpp" />
     <ClInclude Include="src\Wall.hpp" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="resources\background.png" />
-    <Image Include="resources\coin.png" />
-    <Image Include="resources\flag.png" />
-    <Image Include="resources\icon.png" />
-    <Image Include="resources\mario.png" />
-    <Image Include="resources\monster.png" />
-    <Image Include="resources\wall.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Font Include="resources\font.ttf" />
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="resources\help.txt" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Makefile" />
-    <None Include="resources\level_prvy" />
+    <None Include="resources\levels\prvy" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="resources\images\icon.png" />
+    <Image Include="resources\textures\background.png" />
+    <Image Include="resources\textures\coin.png" />
+    <Image Include="resources\textures\flag.png" />
+    <Image Include="resources\textures\mario.png" />
+    <Image Include="resources\textures\monster.png" />
+    <Image Include="resources\textures\wall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="resources\fonts\font.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="resources\text\help.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

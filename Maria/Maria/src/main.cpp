@@ -4,37 +4,29 @@
 #include <thread>
 #include <chrono>
 #include "UI.hpp"
-#include "Textures.hpp"
+#include "Resources.hpp"
 
 int main()
 {
-	Textures::Init();
+	Resources resources;
 
 	sf::RenderWindow window(sf::VideoMode(800, 600), "Maria");
 	window.setFramerateLimit(60);
 	
-	{
-		sf::Image icon;
-		icon.loadFromFile("resources/icon.png");
-		window.setIcon(32, 32, icon.getPixelsPtr());
-	}
+	window.setIcon(32, 32, resources.images["icon"].getPixelsPtr());
 
 	sf::RectangleShape shape;
 	{
-		auto mario_texture = Textures::Get(Textures::mario);
+		auto mario_texture = &resources.textures["mario"];
 		shape.setSize(Vector(mario_texture->getSize()));
 		shape.setPosition(sf::Vector2f(50, 50));
 		shape.setTexture(mario_texture);
 	}
 
-	sf::Font font;
-	font.loadFromFile("resources/font.ttf");
-
 	sf::Text text;
-	text.setFont(font);
+	text.setFont(resources.fonts["font"]);
 	text.setCharacterSize(100);
 	text.setFillColor(sf::Color::Magenta);
-
 
 	while (window.isOpen())
 	{

@@ -13,6 +13,21 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Resource Files\textures">
+      <UniqueIdentifier>{c3dc31d3-0467-49ad-b451-eff28cb375c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\images">
+      <UniqueIdentifier>{84a4993e-bb4c-443a-acaa-41e278ee897a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\fonts">
+      <UniqueIdentifier>{5d31d5d8-7dbd-4454-a0fc-e03ae5dbe3b7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\texts">
+      <UniqueIdentifier>{742ae5cb-dff2-440f-b467-a70edd969e05}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\levels">
+      <UniqueIdentifier>{eaecd11f-7343-4df4-953e-109f373743af}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\main.cpp">
@@ -51,7 +66,7 @@
     <ClCompile Include="src\UI.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\Textures.cpp">
+    <ClCompile Include="src\Resources.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -95,47 +110,47 @@
     <ClInclude Include="src\UI.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\Textures.hpp">
+    <ClInclude Include="src\Resources.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="resources\background.png">
-      <Filter>Resource Files</Filter>
+    <None Include="Makefile" />
+    <None Include="resources\levels\prvy">
+      <Filter>Resource Files\levels</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="resources\images\icon.png">
+      <Filter>Resource Files\images</Filter>
     </Image>
-    <Image Include="resources\coin.png">
-      <Filter>Resource Files</Filter>
+    <Image Include="resources\textures\background.png">
+      <Filter>Resource Files\textures</Filter>
     </Image>
-    <Image Include="resources\flag.png">
-      <Filter>Resource Files</Filter>
+    <Image Include="resources\textures\coin.png">
+      <Filter>Resource Files\textures</Filter>
     </Image>
-    <Image Include="resources\icon.png">
-      <Filter>Resource Files</Filter>
+    <Image Include="resources\textures\flag.png">
+      <Filter>Resource Files\textures</Filter>
     </Image>
-    <Image Include="resources\mario.png">
-      <Filter>Resource Files</Filter>
+    <Image Include="resources\textures\mario.png">
+      <Filter>Resource Files\textures</Filter>
     </Image>
-    <Image Include="resources\monster.png">
-      <Filter>Resource Files</Filter>
+    <Image Include="resources\textures\monster.png">
+      <Filter>Resource Files\textures</Filter>
     </Image>
-    <Image Include="resources\wall.png">
-      <Filter>Resource Files</Filter>
+    <Image Include="resources\textures\wall.png">
+      <Filter>Resource Files\textures</Filter>
     </Image>
   </ItemGroup>
   <ItemGroup>
-    <Font Include="resources\font.ttf">
-      <Filter>Resource Files</Filter>
+    <Font Include="resources\fonts\font.ttf">
+      <Filter>Resource Files\fonts</Filter>
     </Font>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="resources\help.txt">
-      <Filter>Resource Files</Filter>
+    <Text Include="resources\text\help.txt">
+      <Filter>Resource Files\texts</Filter>
     </Text>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="resources\level_prvy">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="Makefile" />
   </ItemGroup>
 </Project>
