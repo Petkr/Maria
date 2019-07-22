@@ -1,7 +1,7 @@
 SRCDIR = src
 
 SRCFILES = $(wildcard $(SRCDIR)/*.cpp)
-OBJFILES = $(SRCDIR:.cpp=.o)
+OBJFILES = $(SRCFILES:.cpp=.o)
 
 CFLAGS = -fconcepts -std=c++2a -g -Wall -pedantic
 LDFLAGS = $(shell pkg-config --libs sfml-all)
