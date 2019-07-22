@@ -11,8 +11,13 @@ Resources::Resources()
 {}
 
 template <>
-void loadFromFile<std::string>(std::string& res, const std::string& filename)
+void loadFromFile<std::string>(std::string& s, const std::string& filename)
 {
 	std::ifstream file(filename);
-	res = std::string(std::istreambuf_iterator<char>(file), std::istreambuf_iterator<char>());
+	file.seekg(0, std::ios::end);
+	std::vector<char> buffer;
+	file.seekg(0);
+	file.read(str, s.capacity());
+
+	std::cout << s.capacity() << std::endl;
 }
