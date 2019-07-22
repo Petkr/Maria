@@ -1,0 +1,3 @@
+[submodule "Papo"]
+	path = Papo
+	url = https://github.com/Petkr/Papo.git
