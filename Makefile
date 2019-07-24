@@ -26,4 +26,4 @@ $(OBJDIR)/%.o:
 
 .PHONY: clean
 clean:
-	rm -f $(OBJFILES) $(DEPFILES) Maria
+	rm -f $(OBJFILES) $(DEPFILES) Maria.out
