@@ -6,3 +6,13 @@ GameObject::GameObject(Level& level, const sf::FloatRect& rectangle)
 {
 	rectangle_shape.setPosition(position(rectangle));
 }
+
+Vector GameObject::Size() const
+{
+	return rectangle_shape.getSize();
+}
+
+Vector GameObject::Position() const
+{
+	return rectangle_shape.getPosition();
+}
