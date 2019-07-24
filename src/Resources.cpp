@@ -1,5 +1,5 @@
 #include "Resources.hpp"
-#include "../Papo/src/block.hpp"
+#include "block.hpp"
 #include <fstream>
 #include <iostream>
 
