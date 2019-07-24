@@ -7,7 +7,7 @@ SRCFILES = $(wildcard $(SRCDIR)/*.cpp)
 OBJFILES = $(subst $(SRCDIR)/,$(OBJDIR)/,$(SRCFILES:.cpp=.o))
 DEPFILES = $(subst $(SRCDIR)/,$(DEPDIR)/,$(SRCFILES:.cpp=.d))
 
-CFLAGS = -fconcepts -std=c++2a -g -Wall -pedantic
+CXXFLAGS = -fconcepts -std=c++2a -g -Wall -pedantic
 LDFLAGS = $(shell pkg-config --libs sfml-all)
 
 $(DISTFILE): $(OBJFILES)
@@ -23,8 +23,8 @@ include $(DEPFILES)
 
 $(OBJDIR)/%.o:
 	mkdir -p $(OBJDIR)
-	$(CXX) -c $< -o $@ $(CFLAGS)
+	$(CXX) -c $< -o $@ $(CXXFLAGS)
 
 .PHONY: clean
 clean:
-	rm -f $(OBJFILES) $(DEPFILES) $(DISTFILE)
+	$(RM) $(OBJFILES) $(DEPFILES) $(DISTFILE)
