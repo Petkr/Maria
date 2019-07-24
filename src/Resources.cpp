@@ -18,5 +18,5 @@ void loadFromFile<std::string>(std::string& s, const std::string& filename)
 	file.seekg(0, std::ios::end);
 	block<char> buffer(file.tellg());
 	file.seekg(0);
-	file.read(buffer(0), buffer.count());
+	file.read(buffer(), buffer.count());
 }
