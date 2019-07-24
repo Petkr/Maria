@@ -2,6 +2,7 @@ SRCDIR = src
 OBJDIR = obj
 DEPDIR = dep
 
+DISTFILE = Maria.out
 SRCFILES = $(wildcard $(SRCDIR)/*.cpp)
 OBJFILES = $(subst $(SRCDIR)/,$(OBJDIR)/,$(SRCFILES:.cpp=.o))
 DEPFILES = $(subst $(SRCDIR)/,$(DEPDIR)/,$(SRCFILES:.cpp=.d))
@@ -9,7 +10,7 @@ DEPFILES = $(subst $(SRCDIR)/,$(DEPDIR)/,$(SRCFILES:.cpp=.d))
 CFLAGS = -fconcepts -std=c++2a -g -Wall -pedantic
 LDFLAGS = $(shell pkg-config --libs sfml-all)
 
-Maria.out: $(OBJFILES)
+$(DISTFILE): $(OBJFILES)
 	$(CXX) -o $@ $^ $(LDFLAGS)
 
 $(DEPDIR)/%.d: $(SRCDIR)/%.cpp
@@ -26,4 +27,4 @@ $(OBJDIR)/%.o:
 
 .PHONY: clean
 clean:
-	rm -f $(OBJFILES) $(DEPFILES) Maria.out
+	rm -f $(OBJFILES) $(DEPFILES) $(DISTFILE)
