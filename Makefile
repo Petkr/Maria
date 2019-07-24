@@ -8,10 +8,10 @@ CFLAGS = -fconcepts -std=c++2a -g -Wall -pedantic
 LDFLAGS = $(shell pkg-config --libs sfml-all)
 
 Maria: $(OBJFILES)
+	mkdir -p $(OBJDIR)
 	$(CXX) -o $@.o $^ $(LDFLAGS)
 
 $(OBJDIR)/%.o: $(SRCDIR)/%.cpp
-	mkdir -p $(OBJDIR)
 	$(CXX) -c -o $@ $^ $(CFLAGS)
 
 .PHONY: clean
