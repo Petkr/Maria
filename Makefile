@@ -9,12 +9,14 @@ DEPFILES = $(subst $(SRCDIR)/,$(DEPDIR)/,$(SRCFILES:.cpp=.d))
 CFLAGS = -fconcepts -std=c++2a -g -Wall -pedantic
 LDFLAGS = $(shell pkg-config --libs sfml-all)
 
-Maria: $(OBJFILES)
-	$(CXX) -o $@.o $^ $(LDFLAGS)
+Maria.out: $(OBJFILES)
+	$(CXX) -o $@ $^ $(LDFLAGS)
 
 $(DEPDIR)/%.d: $(SRCDIR)/%.cpp
 	mkdir -p $(DEPDIR)
 	$(CXX) -MM $^ -MT $(OBJDIR)/$*.o -MF $@
+
+$(OBJDIR)/%.o: $(DEPDIR)/%.d
 
 include $(DEPFILES)
 
