@@ -16,7 +16,7 @@ class Resources
 	template <typename T>
 	struct Type
 	{
-		std::map<std::string, T> resources;
+		std::unordered_map<std::string, T> resources;
 
 		Type(const std::string& folder)
 			: resources()
